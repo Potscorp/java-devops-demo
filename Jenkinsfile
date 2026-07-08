@@ -15,4 +15,4 @@ pipeline {
         sh 'which mvn'
     }
 }
-
+}
