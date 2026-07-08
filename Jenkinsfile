@@ -6,14 +6,13 @@ pipeline {
         jdk 'Java21'
         maven 'Maven3'
     }
-
-    stages {
-
-        stage('Build') {
-            steps {
-                sh 'mvn clean package'
-            }
-        }
-
+    stage('Environment Check') {
+    steps {
+        sh 'java -version'
+        sh 'mvn -version'
+        sh 'echo $JAVA_HOME'
+        sh 'which java'
+        sh 'which mvn'
     }
 }
+
