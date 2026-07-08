@@ -9,12 +9,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/Potscorp/java-devops-demo.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn clean package'
@@ -22,5 +16,4 @@ pipeline {
         }
 
     }
-
 }
